@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef Name="SRaddedPart" Abstract="True">
+    <hediffClass>Hediff_Implant</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef Name="addedPartSR" Abstract="True">
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(255,150,242)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="SRaddedPart">
+    <defName>JenovaCellsmodified</defName>
+    <label>Genetically Modified with Jenova Cells</label>
+    <labelNoun>Genetically Modified with Jenova Cells</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_HealPermanentWounds" />
+    </comps>
+    <addedPartProps>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <painFactor>-0.2</painFactor>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

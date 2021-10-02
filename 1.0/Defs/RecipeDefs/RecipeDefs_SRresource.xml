@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===========-->
+  <RecipeDef>
+    <defName>MAKsteelCraft</defName>
+    <label>Make MakSteel Ingots </label>
+    <description>Make x5 MakSteel Ingots</description>
+    <jobString>Making Maksteel Ingots</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>5000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <MakSteelRe>5</MakSteelRe>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SolidMako</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Makobarrel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_MakSteel</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>SolidMakoCraft</defName>
+    <label>Create x5 Materia </label>
+    <description>Create x5 Materia Chunks</description>
+    <jobString>Condensing Materia</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Condensing_Machining</soundWorking>
+    <workAmount>2000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <SolidMako>5</SolidMako>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makobarrel</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makobarrel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Materiacondenser</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_MakSteel</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>SRBoxoftoolsCraft</defName>
+    <label>Make boxes of Shin-Ra Tools </label>
+    <description>Make x5 boxes of Shin-Ra Tools</description>
+    <jobString>Making boxes of Shin-Ra Tools </jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>10000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <SRBoxoftools>5</SRBoxoftools>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_Lifestreamstudy</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

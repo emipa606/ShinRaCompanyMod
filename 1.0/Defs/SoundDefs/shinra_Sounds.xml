@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>weaponattacks</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Stings/arma2</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.0</min>
+          <max>1.0</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_Fire2</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/srsmgfire1</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_plasmaFire1</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/plasmaballs</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1</min>
+          <max>1.2</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_laserminiFire1</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/lasermini</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_missileFire1</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/missile</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_Fire1</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/srsmgfire1</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>TYPE_A_FIRE</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Type_A_shot</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Rufus_shotgun_fire1</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/shotgunRfire1</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRTargeter_Aiming</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <tempoAffectedByGameSpeed>false</tempoAffectedByGameSpeed>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/srbomberpointing</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>10</min>
+          <max>10</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Condensing_Machining</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStopSound>Machining_Stop</sustainStopSound>
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/condensingmat</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>10</min>
+          <max>10</max>
+        </volumeRange>
+        <distRange>
+          <min>10</min>
+          <max>50</max>
+        </distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Recipe_SRGenetics</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStopSound>Machining_Stop</sustainStopSound>
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/makobubbles</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>15</min>
+          <max>15</max>
+        </volumeRange>
+        <distRange>
+          <min>0</min>
+          <max>25</max>
+        </distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRgeneratorWorking</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <eventNames />
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>GeothermalPlant_Ambience_Start</sustainStartSound>
+    <sustainStopSound>GeothermalPlant_Ambience_Stop</sustainStopSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/generatorworking</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>15</min>
+          <max>25</max>
+        </volumeRange>
+        <pitchRange>
+          <min>1</min>
+          <max>1.015</max>
+        </pitchRange>
+        <distRange>
+          <min>0</min>
+          <max>25</max>
+        </distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRRADIO_Machining</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStopSound>Machining_Stop</sustainStopSound>
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/radiowork</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>10</min>
+          <max>10</max>
+        </volumeRange>
+        <distRange>
+          <min>10</min>
+          <max>50</max>
+        </distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRTargeter_Fire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/srbomberfire1</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>GameStartSshinra</defName>
+    <eventNames />
+    <maxVoices>1</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Stings/Shinra</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>30</min>
+          <max>30</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MUSAHIT</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/musacut</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.0</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>bustercuts</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/bustercut</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.0</min>
+          <max>1.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_laserminiFire2</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/lasermini</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.2152174</min>
+          <max>0.642391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_EnergyCANON</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Lazor</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_EnergyCANONCHARGE</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/charge</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_PLASCANON</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Plasmafirecannon</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRSMG_EnergyCANONPCHARGE</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/PLASMAcharge</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>SRFlameThrower</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Fire/BurningLoop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>65.09319</min>
+          <max>70.58423</max>
+        </volumeRange>
+        <pitchRange>
+          <min>1.653763</min>
+          <max>1.965591</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>sr88mmreload</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/sr88mmreload</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>1.2152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

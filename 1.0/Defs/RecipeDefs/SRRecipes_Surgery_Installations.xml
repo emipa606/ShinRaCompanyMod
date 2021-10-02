@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--======================= Install genetic modifications parts =========================-->
+  <RecipeDef Abstract="True" Name="SRSurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_SRGenetics</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>18</workSkillLearnFactor>
+  </RecipeDef>
+  <RecipeDef ParentName="SRSurgeryFlesh">
+    <defName>InstallJenovaCells</defName>
+    <label>Implant J.E.N.O.V.A Cells on Gaia human</label>
+    <description>Modifies the subject with Jenova cells, granting he/she with a enhanced body strengh, health and other improvements at the cost of... well some of his humanity, Warning not all Gaia subjects are genetically compatible to accept the Jenova cells, some even die on the process.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Gene Modifying Subject.</jobString>
+    <workAmount>6500</workAmount>
+    <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>JenovaCellsfrask</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>JenovaCellsfrask</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <recipeUsers>
+      <li>HumanSoldier</li>
+    </recipeUsers>
+    <addsHediff>JenovaCellsmodified</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SRSurgeryFlesh">
+    <defName>InstallJenovaCellsHuman</defName>
+    <label>Implant J.E.N.O.V.A Cells on normal human </label>
+    <description>Modifies the subject with Jenova cells, granting he/she with a enhanced body strengh, health and other improvements at the cost of... well some of his humanity, WARNING: Normal Humans are not genetically compatible to accept the Jenova cells, high chance of death on the process.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Gene Modifying Subject.</jobString>
+    <workAmount>6500</workAmount>
+    <surgerySuccessChanceFactor>0.60</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.75</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>JenovaCellsfrask</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>JenovaCellsfrask</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <addsHediff>JenovaCellsmodified</addsHediff>
+  </RecipeDef>
+</Defs>

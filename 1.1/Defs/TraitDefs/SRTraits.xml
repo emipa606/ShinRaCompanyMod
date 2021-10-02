@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>soldiertrait</defName>
+    <commonality>0.1</commonality>
+    <degreeDatas>
+      <li>
+        <label>SOLDIER 1st Class</label>
+        <description>[PAWN_nameDef] is a member of Shin-Ra's elite troops,it's trained on the use of a wide range of weapons, and the hard training carried on Gaia and the frequent Mako infussions applied makes [PAWN_nameDef] a powerfull and resistant melee soldier.</description>
+        <statOffsets>
+          <MeleeDodgeChance>0.25</MeleeDodgeChance>
+          <MeleeHitChance>0.15</MeleeHitChance>
+          <ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+          <MentalBreakThreshold>-0.12</MentalBreakThreshold>
+          <AimingDelayFactor>-0.05</AimingDelayFactor>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+          <MoveSpeed>0.05</MoveSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Nerves</li>
+      <li>BodyPurist</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+  <TraitDef>
+    <defName>soldiertrait2nd</defName>
+    <commonality>0.1</commonality>
+    <degreeDatas>
+      <li>
+        <label>SOLDIER 2nd Class</label>
+        <description>[PAWN_nameDef] is a member of Shin-Ra's elite troops,it's trained on the use of a wide range of weapons, and the hard training carried on Gaia and the frequent Mako infussions applied makes [PAWN_nameDef] a powerfull and resistant melee soldier.</description>
+        <statOffsets>
+          <MeleeDodgeChance>0.20</MeleeDodgeChance>
+          <MeleeHitChance>0.10</MeleeHitChance>
+          <ImmunityGainSpeed>0.10</ImmunityGainSpeed>
+          <MentalBreakThreshold>-0.9</MentalBreakThreshold>
+          <AimingDelayFactor>-0.03</AimingDelayFactor>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+          <MoveSpeed>0.03</MoveSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Nerves</li>
+      <li>BodyPurist</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+  <TraitDef>
+    <defName>soldiertrait3rd</defName>
+    <commonality>0.1</commonality>
+    <degreeDatas>
+      <li>
+        <label>SOLDIER 3rd Class</label>
+        <description>[PAWN_nameDef] is a member of Shin-Ra's elite troops,it's trained on the use of a wide range of weapons, and the hard training carried on Gaia and the frequent Mako infussions applied makes [PAWN_nameDef] a powerfull and resistant melee soldier.</description>
+        <statOffsets>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+          <MeleeHitChance>0.08</MeleeHitChance>
+          <ImmunityGainSpeed>0.06</ImmunityGainSpeed>
+          <MentalBreakThreshold>-0.6</MentalBreakThreshold>
+          <AimingDelayFactor>-0.02</AimingDelayFactor>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+          <MoveSpeed>0.02</MoveSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Nerves</li>
+      <li>BodyPurist</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+</Defs>

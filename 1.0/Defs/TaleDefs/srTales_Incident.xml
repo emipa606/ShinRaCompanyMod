@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TaleDef>
+    <defName>Toxicmakocontanationtale</defName>
+    <label>Mako Contamination</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <baseInterest>50</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;fallout settling over [pawn_nameShortDef]'s [community]</li>
+        <li>tale_noun-&gt;the atmosphere near [pawn_nameShortDef]'s [community] becoming toxic</li>
+        <li>image-&gt;an ominous sky, [circumstance_group]</li>
+        <li>image-&gt;the air becoming thick and [circumstance_group]</li>
+        <li>image-&gt;the ground glowing gently and [circumstance_group]</li>
+        <li>image-&gt;fields of dead plants [circumstance_group]</li>
+        <li>image-&gt;[quantity_adjphrase] graves [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;with no life in sight</li>
+        <li>circumstance_phrase-&gt;covered by a faint sheen of luminous dust</li>
+        <li>circumstance_phrase-&gt;arranged in a pattern that suggests bones</li>
+        <li>circumstance_phrase-&gt;waiting for the poison to stop</li>
+        <li>desc_sentence-&gt;[pawn_nameShortDef] lies on the ground, [pawn_possessive] body twisted at an unusual angle.</li>
+        <li>desc_sentence-&gt;[pawn_nameShortDef] hides near a [terrainfeature], gazing out with a [angstyadjective] look.</li>
+        <li>desc_sentence-&gt;[pawn_nameShortDef] looks on in shock.</li>
+        <li>desc_sentence-&gt;[pawn_nameShortDef] rests quietly with a layer of sweat upon [pawn_possessive] face.</li>
+        <li>desc_sentence-&gt;[quantity_adjphrase] dead [animal]s litter the ground.</li>
+        <li>desc_sentence-&gt;[quantity_adjphrase] dying [animal]s litter the ground.</li>
+        <li>desc_sentence-&gt;[quantity_adjphrase] [animal]s mill around uncertainly.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+</Defs>

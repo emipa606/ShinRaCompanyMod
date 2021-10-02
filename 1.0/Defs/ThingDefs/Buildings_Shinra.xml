@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--========================= shinra wall & tiles bases ==========================-->
+  <ThingDef Name="shinra_BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+  <ThingDef Name="Shinra_WallSignLightedBase" ParentName="shinra_BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <passability>Standable</passability>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <statBases>
+      <Beauty>15</Beauty>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>50</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Mass>5.0</Mass>
+    </statBases>
+    <costList>
+      <Steel>5</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <soundPowerOn>Power_OnSmall</soundPowerOn>
+        <soundPowerOff>Power_OffSmall</soundPowerOff>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <destroyable>true</destroyable>
+    <clearBuildingArea>false</clearBuildingArea>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--==================== Shin-Ra Wall Sign =========================-->
+  <ThingDef ParentName="Shinra_WallSignLightedBase">
+    <defName>Shinra_WallSignLighted</defName>
+    <label>Shin-Ra Sign With Lamps</label>
+    <description>Now you can claim these lands for the company with a sign!,includes lamps.</description>
+    <graphicData>
+      <texPath>Things/Building/Lighting/Shinra_WallSignLighted</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2,2</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/Lighting/Shinra_WallSignLighted_UI</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>15</glowRadius>
+        <glowColor>(229,199,49,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--==================== Shin-Ra mako medicals =============-->
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>SRMakSuspensionTank</defName>
+    <label>Mako Suspension Tank</label>
+    <description>A Suspension Tank Filled with Medical Refined Mako, any person placed here heals faster, also it's ideal for applying genetic modifications.</description>
+    <graphicData>
+      <texPath>Things/Building/Beds/MakoMedicalbed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>5850</WorkToBuild>
+      <Mass>70</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>2</BedRestEffectiveness>
+      <Comfort>0.0</Comfort>
+      <ImmunityGainSpeedFactor>1.54</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.40</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>2.0</SurgerySuccessChanceFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(0,255,162,0)</glowColor>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Steel>80</Steel>
+      <MedicineIndustrial>10</MedicineIndustrial>
+      <Makobarrel>50</Makobarrel>
+    </costList>
+    <building>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_healPerDay>12</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+    </building>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>Shinra_Makomedical</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>SRrobotrechargestation</defName>
+    <label>Robot Recharge Station</label>
+    <description>A Station where Shin-Ra designed robots can recharge it's mako batteries ,there they can be repaired.</description>
+    <graphicData>
+      <texPath>Things/Building/Beds/RobotMedicalbed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>5850</WorkToBuild>
+      <Mass>70</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>2</BedRestEffectiveness>
+      <Comfort>10.0</Comfort>
+      <ImmunityGainSpeedFactor>1.54</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.40</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>2.0</SurgerySuccessChanceFactor>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(0,255,162,0)</glowColor>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Steel>80</Steel>
+      <Makobarrel>50</Makobarrel>
+    </costList>
+    <building>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_healPerDay>12</bed_healPerDay>
+      <bed_defaultMedical>false</bed_defaultMedical>
+      <joyKind>Gaming_Dexterity</joyKind>
+    </building>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>Shinra_robotics1</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>SRrobottankparkspot</defName>
+    <label>Robot Tank Portable Repair Station</label>
+    <description>A Station where Shin-Ra Tank robots can recharge it's mako batteries and be repaired.</description>
+    <graphicData>
+      <texPath>Things/Building/Beds/RobottankMedicalbed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>550</MaxHitPoints>
+      <WorkToBuild>5850</WorkToBuild>
+      <Mass>70</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>2</BedRestEffectiveness>
+      <Comfort>10.0</Comfort>
+      <ImmunityGainSpeedFactor>1.54</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.40</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>2.0</SurgerySuccessChanceFactor>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <building>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_healPerDay>12</bed_healPerDay>
+      <bed_defaultMedical>false</bed_defaultMedical>
+      <joyKind>Gaming_Dexterity</joyKind>
+    </building>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>Shinra_robotics2</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+</Defs>

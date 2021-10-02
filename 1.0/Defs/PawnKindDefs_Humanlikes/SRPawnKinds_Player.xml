@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef Abstract="True" Name="BasePlayerPawnKind">
+    <race>HumanSoldier</race>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Colonistsr</defName>
+    <label>Gaia Human</label>
+    <defaultFactionType>SRPlayerColony</defaultFactionType>
+    <backstoryCategories>
+      <li>Shinrabs</li>
+    </backstoryCategories>
+    <chemicalAddictionChance>0.04</chemicalAddictionChance>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>srSOLDIER</defName>
+    <label>Gaia Human</label>
+    <defaultFactionType>SRPlayerColony</defaultFactionType>
+    <backstoryCategories>
+      <li>ShinrabsS</li>
+    </backstoryCategories>
+    <chemicalAddictionChance>0.00</chemicalAddictionChance>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>robotColonist</defName>
+    <label>Security Robot</label>
+    <race>ShinraRobotRace</race>
+    <combatPower>250</combatPower>
+    <backstoryCategories>
+      <li>robots</li>
+    </backstoryCategories>
+    <defaultFactionType>SRPlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0.00</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>robotCraneColonist</defName>
+    <label>Haul Robot</label>
+    <race>ShinraRobotCraneRace</race>
+    <backstoryCategories>
+      <li>robots</li>
+    </backstoryCategories>
+    <defaultFactionType>SRPlayerColony</defaultFactionType>
+    <combatPower>450</combatPower>
+    <chemicalAddictionChance>0.00</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>robottankColonist</defName>
+    <label>Tank Robot</label>
+    <race>ShinraRobottankRace</race>
+    <backstoryCategories>
+      <li>Tanks</li>
+    </backstoryCategories>
+    <defaultFactionType>SRPlayerColony</defaultFactionType>
+    <combatPower>700</combatPower>
+    <chemicalAddictionChance>0.00</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+</Defs>

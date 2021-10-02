@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>Makopool</defName>
+    <label>lifestream pool</label>
+    <description>Natural Lifestream surface leaks, sometime maybe in some centuries, materia will naturally form here. (you can build Lifestream Processor on top of this).</description>
+    <thingClass>Building_MakoPool</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Natural/Lifebreach</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <altitudeLayer>Floor</altitudeLayer>
+    <rotatable>false</rotatable>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <size>(2,2)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>false</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(23,209,120,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GameConditionDef>
+    <defName>Toxicmakocontaminationcond</defName>
+    <conditionClass>GameCondition_MakoContamination</conditionClass>
+    <label>Toxic Mako Contamination</label>
+    <description>A plume of toxic Mako contamination from some distant Shin-Ra Mako Transport Ship Crash is slowly settling over this entire region of the planet. Anyone not under a roof will be slowly poisoned.</description>
+    <endMessage>The worst of the toxic Mako contamination has settled.</endMessage>
+    <canBePermanent>false</canBePermanent>
+  </GameConditionDef>
+</Defs>

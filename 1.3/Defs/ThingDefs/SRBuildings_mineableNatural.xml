@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--==================== Natural Materia in World =========================-->
+  <ThingDef ParentName="RockBase">
+    <defName>MateriaMineable</defName>
+    <label>Natural Materia</label>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(155,133,107)</color>
+      <colorTwo>(23,209,120)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4500</MaxHitPoints>
+    </statBases>
+    <description>Materia occurs naturally at "Mako Springs",places where the Lifestream leaks to the surface and condenses, this is a rare occurence,taking centuries to the Mako to crystallize on Materia.</description>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>SolidMako</mineableThing>
+      <mineableYield>10</mineableYield>
+      <mineableScatterCommonality>0.25</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>15</min>
+        <max>25</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(23,209,120,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

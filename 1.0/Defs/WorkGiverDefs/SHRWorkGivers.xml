@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkGiverDef>
+    <defName>srradiooperaion</defName>
+    <label>Operate Shin-Ra Comms Sytem</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>110</priorityInType>
+    <verb>modify</verb>
+    <gerund>modifying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <fixedBillGiverDefs>
+      <li>SROrbitalCommsTable</li>
+    </fixedBillGiverDefs>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>makocondensingwork</defName>
+    <label>Operate the Mako Condenser</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>110</priorityInType>
+    <verb>modify</verb>
+    <gerund>modifying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <fixedBillGiverDefs>
+      <li>Materiacondenser</li>
+    </fixedBillGiverDefs>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>srroboticsbuildtable</defName>
+    <label>Operate Shin-Ra Robotics Table</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>110</priorityInType>
+    <verb>modify</verb>
+    <gerund>modifying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <fixedBillGiverDefs>
+      <li>SRrobotWorkbench</li>
+    </fixedBillGiverDefs>
+  </WorkGiverDef>
+</Defs>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MakoReactorgen</defName>
+    <label>Mako Powered Generator</label>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Special/makogenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Generates large amounts of power by processing Mako Barrels, but has a very high fuel consumition.WARNING: Due to Mako Volatility, the destruction result of explosion will vary depending on Mako loaded and can be very big.</description>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-8000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>25.0</fuelConsumptionRate>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Makobarrel</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(0,255,162,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5</explosiveRadius>
+        <explosiveExpandPerFuel>5.95</explosiveExpandPerFuel>
+        <explosiveDamageType>MAKOBomb</explosiveDamageType>
+        <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>70</min>
+          <max>150</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Electricity</li>
+      <li>Shinra_MakoEnergy</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <soundAmbient>SRgeneratorWorking</soundAmbient>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MakoProcessor</defName>
+    <label>Small Lifestream to Mako Processor</label>
+    <description>Converts Lifestream from underneath a Steam Geyser to Mako Barrels over time,also it slowy damages all the nearby flora  and eventually leaves a dead wasteland around the Processor, Shin-Ra company denies that this effect it's caused by the processor itself or the lifestream extraction.WARNING: Due to Mako Volatility, the destruction result explosion will be big.</description>
+    <graphicData>
+      <texPath>Things/Building/Special/makoprocessor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+      <damageData>
+        <rect>(0.3,0,5.4,6)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>30</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>4000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(0,255,162,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Spawner">
+        <requiresPower>true</requiresPower>
+        <thingToSpawn>Makobarrel</thingToSpawn>
+        <spawnCount>30</spawnCount>
+        <spawnIntervalRange>
+          <min>28000</min>
+          <max>28000</max>
+        </spawnIntervalRange>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>15</explosiveRadius>
+        <explosiveDamageType>MAKOBomb</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_PlantHarmRadius">
+        <radiusPerDayCurve>
+          <points>
+            <li>0.1</li>
+            <li>0.1</li>
+            <li>0.1</li>
+            <li>0.2</li>
+          </points>
+        </radiusPerDayCurve>
+        <harmFrequencyPerArea>0.005</harmFrequencyPerArea>
+      </li>
+    </comps>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+      <Mass>35</Mass>
+      <WorkToBuild>28000</WorkToBuild>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <tickerType>Normal</tickerType>
+    <size>(6,6)</size>
+    <fillPercent>1.0</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <passability>Impassable</passability>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Production</designationCategory>
+    <researchPrerequisites>
+      <li>Electricity</li>
+      <li>Shinra_Lifestreamstudy</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_OnMakopool</li>
+      <li>PlaceWorker_OnSteamGeyser</li>
+    </placeWorkers>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <soundAmbient>SRgeneratorWorking</soundAmbient>
+    </building>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyPartDef>
+    <defName>TankBody</defName>
+    <label>Tank Armored Body</label>
+    <hitPoints>470</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyFrontalScyte</defName>
+    <label>Spiked Frontal</label>
+    <hitPoints>55</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyMechanicalNeck</defName>
+    <label>Engine System</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyMechanicalHead</defName>
+    <label>A.I Core Armor</label>
+    <hitPoints>45</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyLeftSightSensor</defName>
+    <label>Frontal Sight Sensor</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyRightSightSensor</defName>
+    <label>Right sight sensor</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyLeftHearingSensor</defName>
+    <label>Left hearing sensor</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyRightHearingSensor</defName>
+    <label>Right hearing sensor</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodySmellSensor</defName>
+    <label>Smell sensor</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyLeftMechanicalShoulder</defName>
+    <label>Left Side Armored Track protection</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyLeftMechanicalArm</defName>
+    <label>Left Side Track</label>
+    <hitPoints>50</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>MovingLimbCore</li>
+      <li>ManipulationLimbSegment</li>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyRightMechanicalShoulder</defName>
+    <label>Right Side Armored Track protection</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyRightMechanicalArm</defName>
+    <label>Right Side Track</label>
+    <hitPoints>50</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>MovingLimbCore</li>
+      <li>ManipulationLimbSegment</li>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>TankBodyArtificialBrain</defName>
+    <label>A.I Core</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+  </BodyPartDef>
+</Defs>

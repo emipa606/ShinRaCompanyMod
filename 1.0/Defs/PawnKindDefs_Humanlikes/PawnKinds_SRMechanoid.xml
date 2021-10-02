@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>Heli_Gunner</defName>
+    <label>Rogue Heli Gunner </label>
+    <race>Mechanoid_HeliGunner</race>
+    <combatPower>300</combatPower>
+    <chemicalAddictionChance>0.0</chemicalAddictionChance>
+    <baseRecruitDifficulty>1</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+    <isFighter>true</isFighter>
+    <defaultFactionType>Mechanoid</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Heli_Gunner</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>3000</min>
+      <max>3000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>heligunnerGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>Heli_GunnerB</defName>
+    <label>Heli Gunner</label>
+    <race>Mechanoid_HeliGunnerB</race>
+    <combatPower>300</combatPower>
+    <chemicalAddictionChance>0.0</chemicalAddictionChance>
+    <baseRecruitDifficulty>1</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+    <isFighter>true</isFighter>
+    <defaultFactionType>Ancients</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Heli_Gunner</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>3000</min>
+      <max>3000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>heligunnerGunMedium</li>
+    </weaponTags>
+    <backstoryCryptosleepCommonality>0.04</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+</Defs>

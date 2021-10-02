@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Robot_HeligunnerParts</defName>
+    <label>Heli Gunner parts</label>
+    <description>all the parts needed to assembly an Heli Gunner Security Robot(WARNING: SAVE BEFORE ASSEMBLING THE ROBOT, GAME MAY RARELY CRASH).</description>
+    <graphicData>
+      <texPath>Things/ROBOTS/heligunnerbox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>2500</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompVehicle.CompProperties_VehicleSpawner">
+        <useVerb>Assemble {0}</useVerb>
+        <vehicleToSpawn>robotColonist</vehicleToSpawn>
+        <assemblyTime>20.0</assemblyTime>
+        <workEffect>ConstructMetal</workEffect>
+      </li>
+    </comps>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Robot_cranebotParts</defName>
+    <label>Crane Bot parts</label>
+    <description>all the parts needed to assembly an Crane Bot Hauling Robot(WARNING: SAVE BEFORE ASSEMBLING THE ROBOT, GAME MAY RARELY CRASH).</description>
+    <graphicData>
+      <texPath>Things/ROBOTS/cranebotbox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompVehicle.CompProperties_VehicleSpawner">
+        <useVerb>Assemble {0}</useVerb>
+        <vehicleToSpawn>robotCraneColonist</vehicleToSpawn>
+        <assemblyTime>20.0</assemblyTime>
+        <workEffect>ConstructMetal</workEffect>
+      </li>
+    </comps>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Robot_TankParts</defName>
+    <label>Tank Bot parts</label>
+    <description>all the parts needed to assembly a Tank Robot(WARNING: SAVE BEFORE ASSEMBLING THE ROBOT, GAME MAY RARELY CRASH).</description>
+    <graphicData>
+      <texPath>Things/ROBOTS/tankbotbox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>4500</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompVehicle.CompProperties_VehicleSpawner">
+        <useVerb>Assemble {0}</useVerb>
+        <vehicleToSpawn>robottankColonist</vehicleToSpawn>
+        <assemblyTime>20.0</assemblyTime>
+        <workEffect>ConstructMetal</workEffect>
+      </li>
+    </comps>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+</Defs>

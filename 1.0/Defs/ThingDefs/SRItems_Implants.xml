@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="SRBodyPartgeneticsBase" ParentName="BodyPartBase" Abstract="True">
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+    <thingCategories>
+      <li>BodyPartsArtificial</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Implant/ImplantSR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="SRBodyPartgeneticsBase">
+    <defName>JenovaCellsfrask</defName>
+    <label>J.E.N.O.V.A Cells Flask </label>
+    <description>This is a Flask of Jenova Cells ready for being added to a subject. 
+	
+	
+Jenova or The Calamity from the Sky like the old Cetra called it, was an Alien being that crashed on Gaia aboard a meteorite 2000 years ago,this alien being almost completely erradicated the Cetra but they managed to defeat it and quarantine it on a far cold place called the North Crater, 50 years ago scientist from Shin-Ra Company unburied it from the cold crater and mistakenly identified it as a Cetra calling it Jenova, The Jenova Proyect became an effort to use the Jenova cells to create Human-Cetra Hybrids, obviously Shin-Ra failed to create a Cetra with Jenova but those treated with the cells proved to be Super-Soldiers, Which led to the members of SOLDIER, Shin-Ra's elite military force to be injected with the cells, now they are widespread used on the company home planet to create super soldiers, Jenova it's still alive today and it's confined on the company headquarters on Gaia.</description>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeTags>
+      <li>Shinraequipment</li>
+    </tradeTags>
+  </ThingDef>
+</Defs>

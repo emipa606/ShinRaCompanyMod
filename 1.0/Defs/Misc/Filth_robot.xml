@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseFilth">
+    <defName>OilRobot</defName>
+    <label>Oil</label>
+    <statBases>
+      <Cleanliness>-5</Cleanliness>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>80</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(0, 0, 0, 255)</color>
+    </graphicData>
+  </ThingDef>
+</Defs>

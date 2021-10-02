@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--SHINRA  TECH TAB AND TECHS-->
+  <ResearchTabDef>
+    <defName>Shinratechs</defName>
+    <label>Shin-Ra</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>Early_Shinra</defName>
+    <label>Request Early Shin-Ra Deployment</label>
+    <description>First stage of the Shin-Ra deployment plan on the Rimworlds, Leads to Shin-Ra Uniforms and Shin-Ra Early Weapons (All items Unlocked here are craftable at Tailor Benchs (both), Machining Table or electric smelter depending of Item, Mako Barrels are produced by time on the Lifestream Processor while turned on, also robotics and Gelnika targetters are crafted on their respective work tables).</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites />
+    <tab>Shinratechs</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_uniforms1</defName>
+    <label>Shin-Ra Uniforms</label>
+    <description>We received the first batch of recipes for basic uniforms and helmets.</description>
+    <baseCost>450</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Early_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_guns1</defName>
+    <label>Shin-Ra Early Weapons</label>
+    <description>We received the first batch of recipes for standard issued  Shin-Ra SMG's.</description>
+    <baseCost>480</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Early_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_Lifestreamstudy</defName>
+    <label>Planet Lifestream Study</label>
+    <description>We start an study to check Lifestream levels of the planet and start developing a Lifestream processing plan.(unlocks lifestream Processing Reactor to be build on top of Steam Geiser to generate Mako Barrels)</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Early_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>inter_Shinra</defName>
+    <label>Request further Shin-Ra Deployment</label>
+    <description>Second stage of the Shin-Ra deployment plan on the Rimworlds, Leads to Shin-Ra Utility Uniforms, Shin-Ra Intermedite Weapons, Shin-Ra Security I and MakSteel Production.</description>
+    <baseCost>550</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Early_Shinra</li>
+      <li>Shinra_uniforms1</li>
+      <li>Shinra_guns1</li>
+      <li>Shinra_Lifestreamstudy</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_security</defName>
+    <label>Shin-Ra Security MK I</label>
+    <description>We received a data package containing recipes for building the Shin-Ra Laser Turret.</description>
+    <baseCost>530</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>inter_Shinra</li>
+      <li>GunTurrets</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_security2</defName>
+    <label>Shin-Ra Security MK II</label>
+    <description>We received a data package containing recipes for building the Shin-Ra Missile Turret.</description>
+    <baseCost>630</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>adv_Shinra</li>
+      <li>Shinra_security</li>
+      <li>GunTurrets</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_security3</defName>
+    <label>Shin-Ra Security MK III</label>
+    <description>We received a data package containing recipes for building the Shin-Ra Missile Artillery.</description>
+    <baseCost>680</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Shinra_security2</li>
+      <li>Shinra_guns3</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_MakSteel</defName>
+    <label>MakSteel Production</label>
+    <description>We received a data package containing recipes for creating MakSteel Alloy Ingots at the electric smelter.</description>
+    <baseCost>520</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>inter_Shinra</li>
+      <li>Smithing</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_uniforms2</defName>
+    <label>Shin-Ra Utility Uniforms</label>
+    <description>We received a data package containing recipes for Utility Uniforms.</description>
+    <baseCost>520</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>inter_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_guns2</defName>
+    <label>Shin-Ra Intermediate Weapons</label>
+    <description>We received a data package containing recipes for standard issued  Shin-Ra Assault Rifles.</description>
+    <baseCost>550</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Shinra_MakSteel</li>
+      <li>inter_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>adv_Shinra</defName>
+    <label>Request Advanced Shin-Ra Deployment</label>
+    <description>Second stage of the Shin-Ra deployment plan on the Rimworlds, Leads to Shin-Ra LeaderShip and Shin-Ra Advanced Weapons.</description>
+    <baseCost>550</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>inter_Shinra</li>
+      <li>Shinra_uniforms2</li>
+      <li>Shinra_guns2</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_uniforms3</defName>
+    <label>Shin-Ra LeaderShip</label>
+    <description>We received a data package containing recipes for Extra Outfits and Special Weapons.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>adv_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_guns3</defName>
+    <label>Shin-Ra Advanced Weapons</label>
+    <description>We received a data package containing recipes for Shin-Ra Sniper Rifles.</description>
+    <baseCost>620</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>adv_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_SOLDIER</defName>
+    <label>SOLDIER Equipment</label>
+    <description>We received a data package containing recipes for Shin-Ra SOLDIER equipmens.</description>
+    <baseCost>660</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Shinra_guns3</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Ext_Shinra</defName>
+    <label>Request Total Shin-Ra Deployment</label>
+    <description>Third stage of the Shin-Ra deployment plan on the Rimworlds, Leads to Shin-Ra Power Armor,Shin-Ra Orbital Support.</description>
+    <baseCost>750</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>adv_Shinra</li>
+      <li>Shinra_uniforms3</li>
+      <li>Shinra_guns3</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>6</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_uniforms4</defName>
+    <label>Shin-Ra Power Armor</label>
+    <description>We received an encripted data package containing recipes for our Grunt Power Armor and Dual Waist Guns.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_gunsOrb</defName>
+    <label>Shin-Ra Orbital Support</label>
+    <description>We received an encripted data package containing recipes for the Shin-Ra Communications Table.</description>
+    <baseCost>720</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_MakoEnergy</defName>
+    <label>Mako Energy Production</label>
+    <description>We received an encripted data package containing recipes for the Mako Powered Generator.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>8</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_Makomedical</defName>
+    <label>Shin-Ra Medical Facilities</label>
+    <description>We received an encripted data package containing recipes for the Mako Suspension Tank.</description>
+    <baseCost>780</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>8</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Shinra_MatGuns</defName>
+    <label>Shin-Ra Mako Weapons</label>
+    <description>We received an encripted data package containing recipes for the Shin-Ra Mako Guns, these are the best weapons Shin-Ra has.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+      <li>Shinra_MakoEnergy</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>SRSpaceShips</defName>
+    <label>Shin-Ra Space Ships</label>
+    <description>(usseless unless you get SRTS Expanded and the Shin-Ra Gelnika sub-mod)We received an encripted data package containing the building plans for the Shin-Ra Space Gelnika MK I, this ship will allow us to travel around the planet and perform bombing missions at a cost of Refined Mako (Mako Barrels).</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Ext_Shinra</li>
+      <li>ShipBasics</li>
+    </prerequisites>
+    <tab>Shinratechs</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+</Defs>
+<!---->

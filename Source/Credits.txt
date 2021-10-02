@@ -1,0 +1,51 @@
+Requires FOR 1.0
+Alien Races Framework 2.0 FOR 1.0
+Jectstools FOR 1.0
+
+NO MODS REQUIRED FOR 1.1
+
+
+Recommended:
+PopCap++
+
+
+Credits:
+
+-Myself for creating the mod.
+-Squarenix for most of the sounds(later modifed by me) and 
+the awsome final fantasy series.
+-Jecrell (Ludeon forums)for his: how to make a rimworld mod step by step tutorial.
+-Jecrell and his team for Jectstools.
+-Erdlef for his Alien Races Framework.
+-Findsounds.com and the recordist for free royalty jet bomber sound.
+-FueledByOCHD for his help on Ludeon Forums, Natural Lifestream Pools are possible due to his guidance on map generation.
+
+
+	Incompatible or has issues with:
+	
+	-None that i know of.
+	
+	the only one that can cause problems it's Combat Extended  mod, 
+	the weapons added by Shin-Ra Mod do not use ammo and 
+	can be OP with the mod activated, there may be more issues.
+	
+	
+	--------------------------------------
+	
+
+
+put the folder on yout Rimworld/Mods folder and activate it on the ingame mod manager
+
+	Load Order for 1.0:
+	-Core
+	-Alien Races Framework 2.0 for 1.0 (must always load before)
+	-Jectstools for 1.0				(must always load before)
+	-(other mods needs and cores)
+	-Shin-Ra Company mod for 1.0
+	
+	
+	
+   Load Order for 1.1:
+	-Core
+	-(other mods needs and cores)
+	-Shin-Ra Company mod

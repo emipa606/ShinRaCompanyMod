@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- =========================== MAKO ============================-->
+  <IncidentDef>
+    <defName>ToxicMakoContamination</defName>
+    <label>Toxic Mako Contamination</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <gameCondition>Toxicmakocontaminationcond</gameCondition>
+    <letterLabel>Toxic Mako Contamination</letterLabel>
+    <letterText>A plume of toxic Mako contamination from some distant Crashed Shin-Ra Mako Transport Ship is slowly settling over this entire region of the planet. Anyone not under a roof will be slowly poisoned, can last days or more  than a week.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>0.10</baseChance>
+    <earliestDay>50</earliestDay>
+    <minRefireDays>250</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <durationDays>
+      <min>1.5</min>
+      <max>8.5</max>
+    </durationDays>
+    <tale>Toxicmakocontanationtale</tale>
+  </IncidentDef>
+</Defs>
