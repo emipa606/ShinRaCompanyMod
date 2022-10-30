@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=============== Missile turret ===============-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_missileAutocannon</defName>
+    <label>Shin-Ra Missile Turret</label>
+    <description>One of the missile launcher turrets developed by Shin-Ra Company, It's Integrated A.I isn't brilliant but, it does the job(Caution is advised when building this).</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Security/SRMissileTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Security/SRMissileTurreticon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5500</WorkToBuild>
+      <Mass>100</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>2.5</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Small Missiles until reload</fuelLabel>
+        <fuelGizmoLabel>Small Missile Count</fuelGizmoLabel>
+        <outOfFuelMessage>Cannot shoot: Needs Small Missile</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>SmallMissile</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>60</fuelCapacity>
+        <!-- 30 bursts -->
+        <fuelMultiplier>1</fuelMultiplier>
+        <!-- 1.333 steel per burst, 80 per full rearm -->
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <MakSteelRe>45</MakSteelRe>
+      <ComponentIndustrial>15</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <combatPower>45</combatPower>
+      <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_SRmissileTurret</turretGunDef>
+      <turretBurstCooldownTime>8.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Shinra_security2</li>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_SRmissileTurret</defName>
+    <label>Shin-Ra Missile Turret</label>
+    <description>One of the missile launcher turrets developed by Shin-Ra Company, It's Integrated A.I isn't brilliant but, it does the job(Caution is advised when building this).</description>
+    <graphicData>
+      <texPath>Things/Security/SRMissileTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_SRMissileTurret</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>40</range>
+        <minRange>6.5</minRange>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <forcedMissRadius>1.0</forcedMissRadius>
+        <soundCast>SRSMG_missileFire1</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <requireLineOfSight>true</requireLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--=============== laser Missile turret===============-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_laserAutocannon</defName>
+    <label>Shin-Ra Laser Turret</label>
+    <description>One of the first energy based turrets developed by Shin-Ra Company, It's integrated A.I isn't brilliant but, it does the job.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Security/SRLaserTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Security/SRLaserTurreticon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>8</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>90</fuelCapacity>
+        <!-- 30 bursts -->
+        <fuelMultiplier>2.25</fuelMultiplier>
+        <!-- 1.333 steel per burst, 80 per full rearm -->
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <MakSteelRe>25</MakSteelRe>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <combatPower>45</combatPower>
+      <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_SRLaserTurret</turretGunDef>
+      <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Shinra_security2</li>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_SRLaserTurret</defName>
+    <label>Shin-Ra Laser Turret</label>
+    <description>One of the first energy based turrets developed by Shin-Ra Company, It's integrated A.I isn't brilliant but, it does the job.</description>
+    <graphicData>
+      <texPath>Things/Security/SRLaserTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>4</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_SRLaserTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>0</minRange>
+        <range>35</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>SRSMG_laserminiFire1</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>0.4</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SRLaserTurret</defName>
+    <label>Shin-Ra Laser Turret bullet</label>
+    <graphicData>
+      <texPath>Things/Projectiles/SRlaserBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>70</speed>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(23,121,250,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SRMissileTurret</defName>
+    <label>Shin-Ra missile Turret bullet</label>
+    <graphicData>
+      <texPath>Things/Projectiles/SRMissileTurretBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <explosionRadius>2.0</explosionRadius>
+      <speed>50</speed>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(255,255,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== Roulette Mako Missile Turret===============-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>SR_ARTILLERY_MISSILE</defName>
+    <label>Shin-Ra Missile Artillery turret</label>
+    <description>The Roulette Missile System was used on Junon,The coastal fortress of Shin-Ra as a ASDS(Anti-Ship Defense System)but now has been redesigned as an artillery launcher to use on the Rimworlds to defend company installations, long reload, requires Materia Missiles to reload, devastating explosion, USE WITH CAUTION.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Security/RouletteLauncher_base</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,-0.16)</drawOffset>
+      <damageData>
+        <rect>(0.3,0.3,1.4,1.4)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <receivesSignals>true</receivesSignals>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <stealable>false</stealable>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <costList>
+      <MakSteelRe>60</MakSteelRe>
+      <ComponentIndustrial>15</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <killedLeavings>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </killedLeavings>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>9.9</explosiveRadius>
+        <explosiveDamageType>MAKOBomb</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Missiles loaded</fuelLabel>
+        <fuelGizmoLabel>Loaded Missiles </fuelGizmoLabel>
+        <outOfFuelMessage>Cannot shoot: Needs Materia Missiles</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>MateriaMissile</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>8</fuelCapacity>
+        <!-- 8 bursts -->
+        <fuelMultiplier>0.80</fuelMultiplier>
+        <!-- 1 steel per burst, 8 per full rearm -->
+        <initialFuelPercent>0</initialFuelPercent>
+        <autoRefuelPercent>0</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>250</Mass>
+      <Beauty>-60</Beauty>
+    </statBases>
+    <damageMultipliers>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+    </damageMultipliers>
+    <building>
+      <buildingTags>
+        <li>Artillery</li>
+      </buildingTags>
+      <combatPower>220</combatPower>
+      <turretGunDef>SR_ARTILLERY_MISSILE_turret</turretGunDef>
+      <turretBurstWarmupTime>5.0</turretBurstWarmupTime>
+      <turretBurstCooldownTime>25.0</turretBurstCooldownTime>
+      <turretInitialCooldownTime>5.0</turretInitialCooldownTime>
+    </building>
+    <uiIconPath>Things/Security/SRrouletteturreticon</uiIconPath>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Shinra_security3</li>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BaseArtilleryWeapon">
+    <defName>SR_ARTILLERY_MISSILE_turret</defName>
+    <label>Shin-Ra Missile Artillery turret</label>
+    <graphicData>
+      <texPath>Things/Security/RouletteLauncher_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>5</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <weaponTags>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>SRBullet_MAKOMISSILE</defaultProjectile>
+        <forcedMissRadius>0.9</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <warmupTime>4</warmupTime>
+        <minRange>20</minRange>
+        <range>250</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>SRSMG_missileFire1</soundCast>
+        <soundAiming>sr88mmreload</soundAiming>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>16</muzzleFlashScale>
+        <requireLineOfSight>false</requireLineOfSight>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li>
+        <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>SRBullet_MAKOMISSILE</defName>
+    <label>Mako Missile</label>
+    <graphicData>
+      <texPath>Things/Projectiles/makomissile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <drawOffset>(0,0,-0.16)</drawOffset>
+      <damageData>
+        <rect>(0.3,0.3,1.4,1.4)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>MAKOBomb</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>120</speed>
+      <explosionRadius>15</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>SRSMG_PLASCANON</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+  </ThingDef>
+  <!--=============== gatling Turret===============-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_GatlingAutocannon</defName>
+    <label>Shin-Ra Gatling Turret</label>
+    <description>One of the first turrets developed by Shin-Ra Company, It's integrated A.I isn't brilliant but, it does the job.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Security/SRGatlingTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Security/SRGATLINGturreticon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>8</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>1.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>350</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>260</fuelCapacity>
+        <!-- 30 bursts -->
+        <fuelMultiplier>2.5</fuelMultiplier>
+        <!-- 1.333 steel per burst, 80 per full rearm -->
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <MakSteelRe>15</MakSteelRe>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <combatPower>45</combatPower>
+      <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_SRgatlingTurret</turretGunDef>
+      <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Shinra_security</li>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_SRgatlingTurret</defName>
+    <label>Shin-Ra Gatling Turret</label>
+    <description>One of the first turrets developed by Shin-Ra Company, It's integrated A.I isn't brilliant but, it does the job.</description>
+    <graphicData>
+      <texPath>Things/Security/SRGatlingTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.76</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>4</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_SRGATLINGTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>0</minRange>
+        <range>32</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>SRSMG_Fire1</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>0.25</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SRGATLINGTurret</defName>
+    <label>Shin-Ra Gatling Turret bullet</label>
+    <graphicData>
+      <texPath>Things/Projectiles/SRSMGBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>85</speed>
+      <armorPenetrationBase>0.18</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+</Defs>

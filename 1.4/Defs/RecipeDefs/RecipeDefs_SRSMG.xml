@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===========-->
+  <RecipeDef>
+    <defName>Gun_Shinra_SMGCraft</defName>
+    <label>Shin-Ra Assault SMG</label>
+    <description>Craft Shin-Ra Assault SMG</description>
+    <jobString>Making Shin-Ra Assault SMG</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>21000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <Gun_Shinra_SMG>1</Gun_Shinra_SMG>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_guns1</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

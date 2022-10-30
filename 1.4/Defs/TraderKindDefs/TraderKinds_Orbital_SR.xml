@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>Orbital_SRMerchant</defName>
+    <label>Shin-Ra Company Approved Merchant</label>
+    <commonality>1</commonality>
+    <orbital>true</orbital>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>
+          <min>2000</min>
+          <max>4000</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>Shinraequipment</tradeTag>
+        <thingDefCountRange>
+          <min>10</min>
+          <max>12</max>
+        </thingDefCountRange>
+        <price>Normal</price>
+        <totalPriceRange>
+          <min>2000</min>
+          <max>15000</max>
+        </totalPriceRange>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>Art</tag>
+      </li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>Gold</thingDef>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

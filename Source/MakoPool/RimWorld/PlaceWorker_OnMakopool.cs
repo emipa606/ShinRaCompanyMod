@@ -1,12 +1,11 @@
 using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+public class PlaceWorker_OnMakopool : PlaceWorker_OnSteamGeyser
 {
-    public class PlaceWorker_OnMakopool : PlaceWorker_OnSteamGeyser
+    public override bool ForceAllowPlaceOver(BuildableDef otherDef)
     {
-        public override bool ForceAllowPlaceOver(BuildableDef otherDef)
-        {
-            return otherDef == SRThingDefOf.Makopool;
-        }
+        return otherDef == SRThingDefOf.Makopool;
     }
 }

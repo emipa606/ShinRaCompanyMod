@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===========-->
+  <RecipeDef>
+    <defName>Gun_Shinra_SRCraft</defName>
+    <label>Shin-Ra Sniper Rifle</label>
+    <description>Craft Shin-Ra Sniper Rifle</description>
+    <jobString>Making Shin-Ra Sniper Rifle</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>32000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <Gun_Shinra_SR>1</Gun_Shinra_SR>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MakSteelRe</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MakSteelRe</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_guns3</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+  <!-- ===========gRUNT Dual Canon-->
+  <RecipeDef>
+    <defName>Gun_Shinra_GDACraft</defName>
+    <label>Shin-Ra Grunt Wrist Dual Gun</label>
+    <description>Craft Shin-Ra Grunt Wrist Dual Gun</description>
+    <jobString>Making Shin-Ra Grunt Wrist Dual Gun</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>28000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <Gun_Shinra_GDA>1</Gun_Shinra_GDA>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MakSteelRe</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MakSteelRe</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_uniforms4</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastDrymako</defName>
+    <graphicData>
+      <texPath>Things/Projectiles/BlastDryMako</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+  </FleckDef>
+</Defs>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===========-->
+  <RecipeDef>
+    <defName>Gun_Shinra_SoldierSCraft</defName>
+    <label>Shin-Ra SOLDIER Sword</label>
+    <description>Craft SOLDIER Sword</description>
+    <jobString>Making SOLDIER Sword</jobString>
+    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>32000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <products>
+      <MeleeWeapon_ShinrasoldierSword>1</MeleeWeapon_ShinrasoldierSword>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MakSteelRe</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MakSteelRe</li>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>Shinra_SOLDIER</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

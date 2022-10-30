@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ToolCapacityDef>
+    <defName>musacut</defName>
+    <label>Extreme Cut</label>
+  </ToolCapacityDef>
+  <ToolCapacityDef>
+    <defName>bustercut</defName>
+    <label>Extreme Cut</label>
+  </ToolCapacityDef>
+</Defs>

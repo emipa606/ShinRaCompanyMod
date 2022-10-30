@@ -64,7 +64,12 @@ public class GameCondition_MakoContamination : GameCondition
             }
 
             var num = 0.028758334f;
-            num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity);
+            var resistance = pawn.GetStatValue(StatDefOf.ToxicEnvironmentResistance);
+            if (resistance != 0)
+            {
+                num /= resistance;
+            }
+
             if (num == 0f)
             {
                 continue;
